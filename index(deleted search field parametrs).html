@@ -28,12 +28,11 @@
   </div>
   </div>
   <div class="intermediatesearchsection wide" style="width: 280px;">
-    <b class="searchColor">
-                        Search by Color:</b>
+    <b class="searchColor">Search by Color:</b>
     <div class="intermediateSearchManaSymbols">
       <span class="SearchManaContainer">
           <input name="SearchWhite" type="checkbox"
-            id="ctl00_ctl00_MainContent_Content_SearchControls_SearchWhite"
+            id="SearchWhite"
             onclick="UpdateSimpleSearchFields"
             class="regular-checkbox big-checkbox" />
           <label for="SearchWhite"></label>
@@ -57,7 +56,7 @@
       </span>
       <span class="SearchManaContainer">
           <input name="SearchRed" type="checkbox"
-          id="ctl00_ctl00_MainContent_Content_SearchControls_SearchRed"
+          id="SearchRed"
           onclick="UpdateSimpleSearchFields"
           class="regular-checkbox big-checkbox" />
           <label for="SearchRed"></label>
@@ -139,8 +138,8 @@
     </p>
     <div class="style-select">
       <select name="CardSets" id="cardSets">
-          <!-- <option value="">Select a Set</option>
-          <option value="Aether Revolt">Aether Revolt</option>
+          <option value="">Select a Set</option>
+          <!-- <option value="Aether Revolt">Aether Revolt</option>
           <option value="Alara Reborn">Alara Reborn</option>
           <option value="Alliances">Alliances</option>
           <option value="Amonkhet">Amonkhet</option>
@@ -316,7 +315,7 @@
     <p>
       Card Type:</p>
     <div class="style-select">
-      <select name="CardType" id="cardType">
+      <select name="CardType" id="cardTypes">
             <!-- <option value=""></option>
             <option value="Artifact">Artifact</option>
             <option value="Basic">Basic</option>
