@@ -4,8 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>Card search MTG</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+  <link type="text/css" rel="stylesheet" href="main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="main.css">
-<style media="screen" background-image:url("images/siloutte sunburst.jpg")>
 
 </style>
 </head>
@@ -75,23 +80,23 @@
       </span>
       <br />
       <p style="padding-top: 20px">
-        <input name="SearchColorExact" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExact" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
+        <input name="SearchColorExact" type="checkbox" id="SearchColorExact" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
         <label for="SearchColorExact"></label> Match Colors
         <b>Exactly</b> (
         <i>use 'and' instead of 'or'</i>)
       </p>
       <br />
       <p>
-        <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchColorExclude" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExclude" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox"
+        <input name="SearchColorExclude" type="checkbox" id="SearchColorExclude" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox"
         />
-        <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExclude"></label>
+        <label for="SearchColorExclude"></label>
         <b>Exclude</b> Unselected Colors (
         <i>limit by selection</i>)
       </p>
       <br />
       <p>
-        <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchColorMulti" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorMulti" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
-        <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorMulti"></label> Match
+        <input name="SearchColorMulti" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorMulti" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
+        <label for="SearchColorMulti"></label> Match
         <b>Multicolored</b> Cards Only (
         <i>2+ colors</i>)
       </p>
@@ -343,7 +348,7 @@
     <p>
       Select Sort Order:</p>
     <div class="style-select">
-      <select name="ctl00$ctl00$MainContent$Content$SearchControls$sortOrder" id="ctl00_ctl00_MainContent_Content_SearchControls_sortOrder">
+      <select name="SearchControls$sortOrder" id="SearchControls_sortOrder">
                                                     <option value=""></option>
                                                     <option value="cn">Collector's Number</option>
           <option value="color">Color</option>
@@ -367,6 +372,16 @@
                                                     <option value="visualspoiler">Visual Spoiler</option>
                                                 </select>
     </div>
+    <p>
+      Select Rarity:</p>
+    <div class="style-select">
+      <select name="CardRarity" id="cardRarity">
+                                                    <option value="">Select Rarity?</option>
+                                                    <option value="common">Common</option>
+                                                    <option value="uncommon">Uncommon</option>
+                                                    <option value="rare">Rare</option>
+                                                    <option value="mythicRare">Mythic Rare</option>
+                                                </select>
   </div>
   </div>
   </div>

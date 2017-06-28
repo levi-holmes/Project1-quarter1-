@@ -4,104 +4,45 @@
 <head>
   <meta charset="utf-8">
   <title>Card search MTG</title>
-  <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="main.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.all.2.74.js"></script>
+<script>
+$(document).ready(function() {
+	$('#slideshow').cycle({
+	fx: 'fade',
+	pager: '#smallnav',
+	pause:   1,
+	speed: 1800,
+	timeout:  3500
+	});
+});
+</script>
+
+<h1><span>M T G 4 M E</span></h1>
+
 
 </head>
 
 <body>
-  <p>MTG let's get some data</p>
-  Search Card:</b>
-  <div class="searchCardtop">
-    <p style="padding-left: 0px;">
-      <input name="SearchCardName" type="checkbox" id="SearchCardName" onclick="UpdateSimpleSearchFields" class="regular-checkbox big-checkbox" checked="checked" />
-      <label for="SearchCardName"></label> Name
-    </p>
-    <p>
-      <input name="SearchCardTypes" type="checkbox" id="SearchCardTypes" onclick="UpdateSimpleSearchFields" class="regular-checkbox big-checkbox" />
-      <label for="SearchCardTypes"></label> Types
-    </p>
-    <p>
-      <input name="SearchCardText" type="checkbox" id="SearchCardText" onclick="UpdateSimpleSearchFields" class="regular-checkbox big-checkbox" />
-      <label for="SearchCardText"></label> Text
-    </p>
-  </div>
-  </div>
-  </div>
-  <div class="intermediatesearchsection wide" style="width: 280px;">
-    <b class="searchColor">
-                        Search by Color:</b>
-    <div class="intermediateSearchManaSymbols">
-      <span class="SearchManaContainer">
-          <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchWhite" type="checkbox"
-            id="ctl00_ctl00_MainContent_Content_SearchControls_SearchWhite"
-            onclick="UpdateSimpleSearchFields"
-            class="regular-checkbox big-checkbox" />
-          <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchWhite"></label>
-          <img title="W" src="/images/Redesign/White_Mana.png" alt="W" />
-      </span>
-      <span class="SearchManaContainer">
-          <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchBlue" type="checkbox"
-            id="ctl00_ctl00_MainContent_Content_SearchControls_SearchBlue"
-            onclick="UpdateSimpleSearchFields"
-            class="regular-checkbox big-checkbox" />
-          <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchBlue"></label>
-          <img title="U" src="/images/Redesign/Blue_Mana.png" alt="U" />
-      </span>
-      <span class="SearchManaContainer">
-          <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchBlack" type="checkbox"
-            id="ctl00_ctl00_MainContent_Content_SearchControls_SearchBlack"
-            onclick="UpdateSimpleSearchFields"
-            class="regular-checkbox big-checkbox" />
-          <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchBlack"></label>
-          <img title="B" src="/images/Redesign/Black_Mana.png" alt="B" />
-      </span>
-      <span class="SearchManaContainer">
-          <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchRed" type="checkbox"
-          id="ctl00_ctl00_MainContent_Content_SearchControls_SearchRed"
-          onclick="UpdateSimpleSearchFields"
-          class="regular-checkbox big-checkbox" />
-          <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchRed"></label>
-          <img title="R" src="/images/Redesign/Red_Mana.png" alt="R" />
-      </span>
-      <span class="SearchManaContainer">
-          <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchGreen" type="checkbox"
-          id="ctl00_ctl00_MainContent_Content_SearchControls_SearchGreen"
-          onclick="UpdateSimpleSearchFields"
-          class="regular-checkbox big-checkbox" />
-          <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchGreen"></label>
-          <img title="G" src="/images/Redesign/Green_Mana.png" alt="G" />
-      </span>
-      <br />
-      <p style="padding-top: 20px">
-        <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchColorExact" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExact" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
-        <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExact"></label> Match Colors
-        <b>Exactly</b> (
-        <i>use 'and' instead of 'or'</i>)
-      </p>
-      <br />
-      <p>
-        <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchColorExclude" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExclude" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox"
-        />
-        <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorExclude"></label>
-        <b>Exclude</b> Unselected Colors (
-        <i>limit by selection</i>)
-      </p>
-      <br />
-      <p>
-        <input name="ctl00$ctl00$MainContent$Content$SearchControls$SearchColorMulti" type="checkbox" id="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorMulti" onclick="UpdateSimpleSearchRestrictions(this)" class="regular-checkbox big-checkbox" />
-        <label for="ctl00_ctl00_MainContent_Content_SearchControls_SearchColorMulti"></label> Match
-        <b>Multicolored</b> Cards Only (
-        <i>2+ colors</i>)
-      </p>
-    </div>
-  </div>
-  <div class="intermediatesearchsection wide right">
-    <b>
-        Filter by: </b>
-    <p> Card Block: </p>
+  <div id="slideshow">
+  <img src="images/ siloutte_suburst.jpg" class="bgM"/>
+  <img src="images/enter_the_infinite_nielien.jpg" class="bgM"/>
+  <img src="images/gift_of_orzhova_by_algenpfleger.jpg" class="bgM"/>
+  <img src="images/island_ruin.jpg" class="bgM"/>
+  <img src="images/WrathOfGod_MTG_JIN_Willmurai_910.jpg" class="bgM"/>
+</div>
+<div id="wrap">
+</div>
+<br>
+
+       Select Search Criteria:<br>
+       <div class="row">
+
+
     <div class="style-select">
       <select name="CardBlock" id="cardBlock">
-          <option value="">Select a Block</option>
+          <option value="">Select Block?</option>
           <option value="Amonkhet Block">Amonkhet Block</option>
           <option value="Battle for Zendikar Block">Battle for Zendikar Block</option>
           <option value="Commander">Commander</option>
@@ -134,13 +75,11 @@
           <option value="Zendikar Block">Zendikar Block</option>
       </select>
     </div>
-    <p>
-      Card Set:
-    </p>
+
     <div class="style-select">
       <select name="CardSets" id="cardSets">
-          <!-- <option value="">Select a Set</option>
-          <option value="Aether Revolt">Aether Revolt</option>
+          <option value="">Select a Set</option>
+          <!-- <option value="Aether Revolt">Aether Revolt</option>
           <option value="Alara Reborn">Alara Reborn</option>
           <option value="Alliances">Alliances</option>
           <option value="Amonkhet">Amonkhet</option>
@@ -313,11 +252,10 @@
           <option value="Zendikar Expeditions">Zendikar Expeditions</option> -->
       </select>
     </div>
-    <p>
-      Card Type:</p>
+
     <div class="style-select">
       <select name="CardType" id="cardType">
-            <!-- <option value=""></option>
+            <option value="">Select Card Type?</option>
             <option value="Artifact">Artifact</option>
             <option value="Basic">Basic</option>
             <option value="Conspiracy">Conspiracy</option>
@@ -335,13 +273,42 @@
             <option value="Sorcery">Sorcery</option>
             <option value="Tribal">Tribal</option>
             <option value="Vanguard">Vanguard</option>
-            <option value="World">World</option> -->
+            <option value="World">World</option>
         </select>
     </div>
-    <p>
+
+    <!-- <p>
+      multiverseid:
+    </p>
+    <div class="style-select">
+        <select name="CardRarity" id="multiverseid"></select> -->
+
+          <div class="style-select" style="padding: 0px;">
+            <select name="CardCost" id="cardCost">
+                <option value="">Select Combines Mana Cost?</option>
+                <!-- <option value="Artifact">Artifact</option>
+                <option value="Basic">Basic</option>
+                <option value="Conspiracy">Conspiracy</option>
+                <option value="Creature">Creature</option>
+                <option value="Enchantment">Enchantment</option>
+                <option value="Instant">Instant</option>
+                <option value="Land">Land</option>
+                <option value="Legendary">Legendary</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Phenomenon">Phenomenon</option>
+                <option value="Plane">Plane</option>
+                <option value="Planeswalker">Planeswalker</option>
+                <option value="Scheme">Scheme</option>
+                <option value="Snow">Snow</option>
+                <option value="Sorcery">Sorcery</option>
+                <option value="Tribal">Tribal</option>
+                <option value="Vanguard">Vanguard</option>
+                <option value="World">World</option> -->
+              </select>
+    <!-- <p>
       Select Sort Order:</p>
     <div class="style-select">
-      <select name="ctl00$ctl00$MainContent$Content$SearchControls$sortOrder" id="ctl00_ctl00_MainContent_Content_SearchControls_sortOrder">
+      <select name="sortOrder" id="ctl00_ctl00_MainContent_Content_SearchControls_sortOrder">
                                                     <option value=""></option>
                                                     <option value="cn">Collector's Number</option>
           <option value="color">Color</option>
@@ -354,28 +321,58 @@
                                                     <option value="t">Toughness</option>
                                                 </select>
     </div>
-    <p>
-      Select Output Format:</p>
+    <p> -->
+      <!-- Select Output Format:</p>
     <div class="style-select">
-      <select name="ctl00$ctl00$MainContent$Content$SearchControls$resultsView" id="ctl00_ctl00_MainContent_Content_SearchControls_resultsView">
+      <select name="resultsView" id="ctl00_ctl00_MainContent_Content_SearchControls_resultsView">
                                                     <option value=""></option>
                                                     <option value="standard">Standard</option>
                                                     <option value="compact">Compact</option>
                                                     <option value="checklist">Checklist</option>
                                                     <option value="visualspoiler">Visual Spoiler</option>
-                                                </select>
+                                                </select> -->
     </div>
+
+    <div class="style-select">
+      <select name="CardRarity" id="cardRarity" onchange="Rarity()">
+        <option value="">Select Rarity?</option>
+        <option value="common">Common</option>
+        <option value="uncommon">Uncommon</option>
+        <option value="rare">Rare</option>
+        <option value="mythicRare">Mythic Rare</option>
+      </select>
+
+    Select Color(s):
+      <div class="style-select">
+        <p style="padding-left: 0px;">
+          <input name="Black" type="checkbox" id="Black" onclick="UpdateSearchField" class="color-checkbox" />
+          <label for="Black"></label>Black
+
+          <input name="Blue" type="checkbox" id="Blue" onclick="UpdateSearchField" class="color-checkbox" />
+          <label for="Blue"></label> Blue
+
+          <input name="Green" type="checkbox" id="Green" onclick="UpdateSearchField" class="color-checkbox" />
+          <label for="Green"></label> Green
+
+          <input name="Red" type="checkbox" id="Red" onclick="UpdateSearchField" class="color-checkbox" />
+          <label for="Red"></label> Red
+
+          <input name="White" type="checkbox" id="White" onclick="UpdateSearchField" class="color-checkbox" />
+          <label for="White"></label> White
+
   </div>
   </div>
   </div>
-  </div>
+
 
 
 
   <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
   <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+  <script src="http://malsup.github.io/jquery.cycle.all.js" charset="utf-8"></script>
   <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="main.css">
 
 </body>
-
+<footer>© 2017 MTG4ME</footer>
 </html>
