@@ -171,6 +171,7 @@ body {
 
 .style-select{background-color: white 90%;
 	display: inline-block;
+	text-align: center;
 
 
 
@@ -187,10 +188,5 @@ body {
 
 footer{
 	text-align: center;
-}
 
-/*.headerpic{
-	border: 0 0 0 0;
-	padding: 0 0 0 0;
-	margin: 0 0 0 0;*/
 }
