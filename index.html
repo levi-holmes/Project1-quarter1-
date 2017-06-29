@@ -26,12 +26,37 @@ $(document).ready(function() {
 
 <body>
   <div id="slideshow">
-  <img src="images/ siloutte_suburst.jpg" class="bgM"/>
-  <img src="images/enter_the_infinite_nielien.jpg" class="bgM"/>
-  <img src="images/gift_of_orzhova_by_algenpfleger.jpg" class="bgM"/>
-  <img src="images/island_ruin.jpg" class="bgM"/>
-  <img src="images/WrathOfGod_MTG_JIN_Willmurai_910.jpg" class="bgM"/>
-</div>
+    <img src="images/siloutte_suburst.jpg" class="bgM"/>
+    <img src="images/enter_the_infinite_nielien.jpg" class="bgM"/>
+    <img src="images/gift_of_orzhova_by_algenpfleger.jpg" class="bgM"/>
+    <img src="images/island_ruin.jpg" class="bgM"/>
+    <img src="images/WrathOfGod_MTG_JIN_Willmurai_910.jpg" class="bgM"/>
+    <img src="http://media.wizards.com/2017/images/daily/cardart_AKH_Hapatra-Vizier-of-Poisons.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/06/Hour-of-Revelation-Hour-of-Devastation-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/04/Pact-of-Negation-Invocations-Amonkhet-MtG-Art.jpg" alt="">
+    <img src="http://2static.fjcdn.com/large/pictures/b4/b6/b4b623_6005603.jpg" alt="">
+    <img src="http://2static.fjcdn.com/pictures/Best_282558_6005603.jpg" alt="">
+    <img src="http://2static.fjcdn.com/pictures/Best_812924_6005603.jpg" alt="">
+    <img src="http://orig03.deviantart.net/c78e/f/2013/024/1/7/mtg__gift_of_orzhova_by_algenpfleger-d5sj6ir.jpg" alt="">
+    <img src="http://www.magicspoiler.com/wp-content/uploads/2013/03/MtG-Theros-Art-615x449.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2014/02/Firespout-MtG-Art.jpg" alt="">
+    <img src="https://cdnb.artstation.com/p/assets/images/images/001/422/281/large/hugh-pindur-pindurski-mtg-angel.jpg?1446135553" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2015/01/Ugin-the-Spirit-Dragon-MtG-alternate-art.png" alt="">
+    <img src="https://s-media-cache-ak0.pinimg.com/originals/1a/72/cf/1a72cfa505123ebcf6d705e1d6b4ff9c.jpg" alt="">
+    <img src="http://img07.deviantart.net/c1f5/i/2015/182/e/1/disciple_of_the_ring___mtg_by_clintcearley-d8ziz7h.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2014/06/Mana-Charged-Dragon-MtG-Art.jpg" alt="">
+    <img src="https://s-media-cache-ak0.pinimg.com/736x/8e/50/0a/8e500a5349e226749e793b562d2214ab--rpg-items-mtg-art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/03/Spell-Pierce-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/02/Amonkhet-Art-01.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/03/Grindstone-Kaladesh-Inventions-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2016/10/Dukhara-Peafowl-Kaladesh-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2016/09/Mana-Vault-Kaladesh-Inventions-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2017/02/Amonkhet-Art-02.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2016/09/Static-Orb-Kaladesh-Inventions-Kaladesh-MtG-Art.jpg" alt="">
+    <img src="http://www.artofmtg.com/wp-content/uploads/2016/09/Prophetic-Prism-Kaladesh-MtG-Art.jpg" alt="">
+    <img src="http://2static.fjcdn.com/large/pictures/b4/b6/b4b623_6005603.jpg" alt="">
+
+
 <div id="wrap">
 </div>
 <br>
@@ -254,7 +279,7 @@ $(document).ready(function() {
     </div>
 
     <div class="style-select">
-      <select name="CardType" id="cardType">
+      <select name="CardType" id="cardType" onchange="Type()">
             <option value="">Select Card Type?</option>
             <option value="Artifact">Artifact</option>
             <option value="Basic">Basic</option>
@@ -284,7 +309,7 @@ $(document).ready(function() {
         <select name="CardRarity" id="multiverseid"></select> -->
 
           <div class="style-select" style="padding: 0px;">
-            <select name="CardCost" id="cardCost">
+            <select name="CardCost" id="cardCost" onchange="CMC()">
                 <option value="">Select Combines Mana Cost?</option>
                 <!-- <option value="Artifact">Artifact</option>
                 <option value="Basic">Basic</option>
@@ -334,32 +359,30 @@ $(document).ready(function() {
     </div>
 
     <div class="style-select">
-      <select name="CardRarity" id="cardRarity" onchange="Rarity()">
+      <select name="CardRarity" id="cardRarity" onchange="RARITY()">
         <option value="">Select Rarity?</option>
+        <option value="Basic Land">Basic Land</option>
         <option value="common">Common</option>
         <option value="uncommon">Uncommon</option>
         <option value="rare">Rare</option>
         <option value="mythicRare">Mythic Rare</option>
+        <option value="Special">Special</option>
       </select>
 
     Select Color(s):
       <div class="style-select">
-        <p style="padding-left: 0px;">
-          <input name="Black" type="checkbox" id="Black" onclick="UpdateSearchField" class="color-checkbox" />
-          <label for="Black"></label>Black
+        <select name="CardColor" id="cardColor" onchange="COLOR()">
+            <option value="">Select Color?</option>
+            <option value="Black">Black</option>
+            <option value="Blue">Blue</option>
+            <option value="Green">Green</option>
+            <option value="Red">Red</option>
+            <option value="White">White</option>
+          </select>
+        <br>
+        <div class="webdesigntuts-workshop">
 
-          <input name="Blue" type="checkbox" id="Blue" onclick="UpdateSearchField" class="color-checkbox" />
-          <label for="Blue"></label> Blue
-
-          <input name="Green" type="checkbox" id="Green" onclick="UpdateSearchField" class="color-checkbox" />
-          <label for="Green"></label> Green
-
-          <input name="Red" type="checkbox" id="Red" onclick="UpdateSearchField" class="color-checkbox" />
-          <label for="Red"></label> Red
-
-          <input name="White" type="checkbox" id="White" onclick="UpdateSearchField" class="color-checkbox" />
-          <label for="White"></label> White
-
+        </div>
   </div>
   </div>
   </div>
@@ -373,6 +396,6 @@ $(document).ready(function() {
   <script src="app.js" charset="utf-8"></script>
   <link rel="stylesheet" href="main.css">
 
-</body>
+</body><br>
 <footer>© 2017 MTG4ME</footer>
 </html>

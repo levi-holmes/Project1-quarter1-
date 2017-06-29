@@ -27,3 +27,5 @@ for (var i = 0; i < 17; i++) {
 //   $Rarityselect.append("<option><p>" + data.sets[i].rarity + "</p></option>")
 // }
 // })
+
+console.log(CBLOCK, CSETS, RARITY, COLOR, CMC, CTYPE);

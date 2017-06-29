@@ -1,68 +1,377 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>MTG4ME</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/css/materialize.min.css">
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.99.0/js/materialize.min.js"></script>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		<link rel="stylesheet" href="main.css">
-		<nav>
-    <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Logo</a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="sass.html">Sass</a></li>
 
-				<li><a href="badges.html">Components</a></li>
-        <li><a href="collapsible.html">JavaScript</a></li>
-      </ul>
+<head>
+  <img src="images/Magic4ME.jpg" height="120e" width="100%" style="opacity 50% " p>
+  <meta charset="utf-8">
+  <title>Card search MTG</title>
+
+    <link rel="stylesheet" href="main.css">
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.6.3.min.js"></script>
+<script type="text/javascript" src="scripts/jquery.cycle.all.2.74.js"></script>
+<script>
+$(document).ready(function() {
+	$('#slideshow').cycle({
+	fx: 'fade',
+	pager: '#smallnav',
+	pause:   1,
+	speed: 1800,
+	timeout:  1250
+	});
+});
+</script>
+</head>
+
+<body>
+  <div id="slideshow">
+		<img src="images/siloutte_suburst.jpg" class="bgM"/>
+	  <img src="images/gift_of_orzhova_by_algenpfleger.jpg" class="bgM"/>
+	  <img src="images/island_ruin.jpg" class="bgM"/>
+	  <img src="images/WrathOfGod_MTG_JIN_Willmurai_910.jpg" class="bgM"/>
+	  <img src="https://cdnb.artstation.com/p/assets/images/images/001/422/281/large/hugh-pindur-pindurski-mtg-angel.jpg?1446135553" alt="">
+	  <img src="http://www.artofmtg.com/wp-content/uploads/2016/09/Static-Orb-Kaladesh-Inventions-Kaladesh-MtG-Art.jpg" alt="">
+	  <img src="http://www.artofmtg.com/wp-content/uploads/2016/09/Prophetic-Prism-Kaladesh-MtG-Art.jpg" alt="">
+	</div>
+<div id="wrap">
+</div>
+<br>
+
+       <p><h2>Select Search Criteria:</h2></p>
+			<br>
+       <div class="row">
+
+
+    <div class="style-select">
+      <select name="CardBlock" id="cardBlock" onchange="CBLOCK">
+          <option value="">Select Block?</option>
+          <option value="Amonkhet Block">Amonkhet Block</option>
+          <option value="Battle for Zendikar Block">Battle for Zendikar Block</option>
+          <option value="Commander">Commander</option>
+          <option value="Ice Age Block">Ice Age Block</option>
+          <option value="Innistrad Block">Innistrad Block</option>
+          <option value="Invasion Block">Invasion Block</option>
+          <option value="Kaladesh Block">Kaladesh Block</option>
+          <option value="Kamigawa Block">Kamigawa Block</option>
+          <option value="Khans of Tarkir Block">Khans of Tarkir Block</option>
+          <option value="Legacy">Legacy</option>
+          <option value="Lorwyn-Shadowmoor Block">Lorwyn-Shadowmoor Block</option>
+          <option value="Masques Block">Masques Block</option>
+          <option value="Mirage Block">Mirage Block</option>
+          <option value="Mirrodin Block">Mirrodin Block</option>
+          <option value="Modern">Modern</option>
+          <option value="Odyssey Block">Odyssey Block</option>
+          <option value="Onslaught Block">Onslaught Block</option>
+          <option value="Ravnica Block">Ravnica Block</option>
+          <option value="Return to Ravnica Block">Return to Ravnica Block</option>
+          <option value="Scars of Mirrodin Block">Scars of Mirrodin Block</option>
+          <option value="Shadows over Innistrad Block">Shadows over Innistrad Block</option>
+          <option value="Shards of Alara Block">Shards of Alara Block</option>
+          <option value="Standard">Standard</option>
+          <option value="Tempest Block">Tempest Block</option>
+          <option value="Theros Block">Theros Block</option>
+          <option value="Time Spiral Block">Time Spiral Block</option>
+          <option value="Un-Sets">Un-Sets</option>
+          <option value="Urza Block">Urza Block</option>
+          <option value="Vintage">Vintage</option>
+          <option value="Zendikar Block">Zendikar Block</option>
+      </select>
     </div>
-  </nav>
-	<p>placeholder</p>
-		</head>
 
+    <div class="style-select">
+      <select name="CardSets" id="cardSets" onchange="CSETS">
+          <option value="">Select a Set</option>
+          <!-- <option value="Aether Revolt">Aether Revolt</option>
+          <option value="Alara Reborn">Alara Reborn</option>
+          <option value="Alliances">Alliances</option>
+          <option value="Amonkhet">Amonkhet</option>
+          <option value="Antiquities">Antiquities</option>
+          <option value="Apocalypse">Apocalypse</option>
+          <option value="Arabian Nights">Arabian Nights</option>
+          <option value="Archenemy">Archenemy</option>
+          <option value="Archenemy: Nicol Bolas">Archenemy: Nicol Bolas</option>
+          <option value="Avacyn Restored">Avacyn Restored</option>
+          <option value="Battle for Zendikar">Battle for Zendikar</option>
+          <option value="Battle Royale Box Set">Battle Royale Box Set</option>
+          <option value="Beatdown Box Set">Beatdown Box Set</option>
+          <option value="Betrayers of Kamigawa">Betrayers of Kamigawa</option>
+          <option value="Born of the Gods">Born of the Gods</option>
+          <option value="Champions of Kamigawa">Champions of Kamigawa</option>
+          <option value="Chronicles">Chronicles</option>
+          <option value="Classic Sixth Edition">Classic Sixth Edition</option>
+          <option value="Coldsnap">Coldsnap</option>
+          <option value="Commander 2013 Edition">Commander 2013 Edition</option>
+          <option value="Commander 2014">Commander 2014</option>
+          <option value="Commander 2015">Commander 2015</option>
+          <option value="Commander 2016">Commander 2016</option>
+          <option value="Commander Anthology">Commander Anthology</option>
+          <option value="Commander's Arsenal">Commander's Arsenal</option>
+          <option value="Conflux">Conflux</option>
+          <option value="Conspiracy: Take the Crown">Conspiracy: Take the Crown</option>
+          <option value="Dark Ascension">Dark Ascension</option>
+          <option value="Darksteel">Darksteel</option>
+          <option value="Dissension">Dissension</option>
+          <option value="Dragon's Maze">Dragon's Maze</option>
+          <option value="Dragons of Tarkir">Dragons of Tarkir</option>
+          <option value="Duel Decks Anthology, Divine vs. Demonic">Duel Decks Anthology, Divine vs. Demonic</option>
+          <option value="Duel Decks Anthology, Elves vs. Goblins">Duel Decks Anthology, Elves vs. Goblins</option>
+          <option value="Duel Decks Anthology, Garruk vs. Liliana">Duel Decks Anthology, Garruk vs. Liliana</option>
+          <option value="Duel Decks Anthology, Jace vs. Chandra">Duel Decks Anthology, Jace vs. Chandra</option>
+          <option value="Duel Decks: Ajani vs. Nicol Bolas">Duel Decks: Ajani vs. Nicol Bolas</option>
+          <option value="Duel Decks: Blessed vs. Cursed">Duel Decks: Blessed vs. Cursed</option>
+          <option value="Duel Decks: Divine vs. Demonic">Duel Decks: Divine vs. Demonic</option>
+          <option value="Duel Decks: Elspeth vs. Kiora">Duel Decks: Elspeth vs. Kiora</option>
+          <option value="Duel Decks: Elspeth vs. Tezzeret">Duel Decks: Elspeth vs. Tezzeret</option>
+          <option value="Duel Decks: Elves vs. Goblins">Duel Decks: Elves vs. Goblins</option>
+          <option value="Duel Decks: Garruk vs. Liliana">Duel Decks: Garruk vs. Liliana</option>
+          <option value="Duel Decks: Heroes vs. Monsters">Duel Decks: Heroes vs. Monsters</option>
+          <option value="Duel Decks: Izzet vs. Golgari">Duel Decks: Izzet vs. Golgari</option>
+          <option value="Duel Decks: Jace vs. Chandra">Duel Decks: Jace vs. Chandra</option>
+          <option value="Duel Decks: Jace vs. Vraska">Duel Decks: Jace vs. Vraska</option>
+          <option value="Duel Decks: Knights vs. Dragons">Duel Decks: Knights vs. Dragons</option>
+          <option value="Duel Decks: Mind vs. Might">Duel Decks: Mind vs. Might</option>
+          <option value="Duel Decks: Nissa vs. Ob Nixilis">Duel Decks: Nissa vs. Ob Nixilis</option>
+          <option value="Duel Decks: Phyrexia vs. the Coalition">Duel Decks: Phyrexia vs. the Coalition</option>
+          <option value="Duel Decks: Sorin vs. Tibalt">Duel Decks: Sorin vs. Tibalt</option>
+          <option value="Duel Decks: Speed vs. Cunning">Duel Decks: Speed vs. Cunning</option>
+          <option value="Duel Decks: Venser vs. Koth">Duel Decks: Venser vs. Koth</option>
+          <option value="Duel Decks: Zendikar vs. Eldrazi">Duel Decks: Zendikar vs. Eldrazi</option>
+          <option value="Eighth Edition">Eighth Edition</option>
+          <option value="Eldritch Moon">Eldritch Moon</option>
+          <option value="Eternal Masters">Eternal Masters</option>
+          <option value="Eventide">Eventide</option>
+          <option value="Exodus">Exodus</option>
+          <option value="Fallen Empires">Fallen Empires</option>
+          <option value="Fate Reforged">Fate Reforged</option>
+          <option value="Fifth Dawn">Fifth Dawn</option>
+          <option value="Fifth Edition">Fifth Edition</option>
+          <option value="Fourth Edition">Fourth Edition</option>
+          <option value="From the Vault: Angels">From the Vault: Angels</option>
+          <option value="From the Vault: Annihilation (2014)">From the Vault: Annihilation (2014)</option>
+          <option value="From the Vault: Dragons">From the Vault: Dragons</option>
+          <option value="From the Vault: Exiled">From the Vault: Exiled</option>
+          <option value="From the Vault: Legends">From the Vault: Legends</option>
+          <option value="From the Vault: Lore">From the Vault: Lore</option>
+          <option value="From the Vault: Realms">From the Vault: Realms</option>
+          <option value="From the Vault: Relics">From the Vault: Relics</option>
+          <option value="From the Vault: Twenty">From the Vault: Twenty</option>
+          <option value="Future Sight">Future Sight</option>
+          <option value="Gatecrash">Gatecrash</option>
+          <option value="Guildpact">Guildpact</option>
+          <option value="Homelands">Homelands</option>
+          <option value="Ice Age">Ice Age</option>
+          <option value="Innistrad">Innistrad</option>
+          <option value="Invasion">Invasion</option>
+          <option value="Journey into Nyx">Journey into Nyx</option>
+          <option value="Judgment">Judgment</option>
+          <option value="Kaladesh">Kaladesh</option>
+          <option value="Khans of Tarkir">Khans of Tarkir</option>
+          <option value="Legends">Legends</option>
+          <option value="Legions">Legions</option>
+          <option value="Limited Edition Alpha">Limited Edition Alpha</option>
+          <option value="Limited Edition Beta">Limited Edition Beta</option>
+          <option value="Lorwyn">Lorwyn</option>
+          <option value="Magic 2010">Magic 2010</option>
+          <option value="Magic 2011">Magic 2011</option>
+          <option value="Magic 2012">Magic 2012</option>
+          <option value="Magic 2013">Magic 2013</option>
+          <option value="Magic 2014 Core Set">Magic 2014 Core Set</option>
+          <option value="Magic 2015 Core Set">Magic 2015 Core Set</option>
+          <option value="Magic Origins">Magic Origins</option>
+          <option value="Magic: The Gathering-Commander">Magic: The Gathering-Commander</option>
+          <option value="Magic: The Gathering—Conspiracy">Magic: The Gathering—Conspiracy</option>
+          <option value="Masterpiece Series: Amonkhet Invocations">Masterpiece Series: Amonkhet Invocations</option>
+          <option value="Masterpiece Series: Kaladesh Inventions">Masterpiece Series: Kaladesh Inventions</option>
+          <option value="Masters Edition">Masters Edition</option>
+          <option value="Masters Edition II">Masters Edition II</option>
+          <option value="Masters Edition III">Masters Edition III</option>
+          <option value="Masters Edition IV">Masters Edition IV</option>
+          <option value="Mercadian Masques">Mercadian Masques</option>
+          <option value="Mirage">Mirage</option>
+          <option value="Mirrodin">Mirrodin</option>
+          <option value="Mirrodin Besieged">Mirrodin Besieged</option>
+          <option value="Modern Event Deck 2014">Modern Event Deck 2014</option>
+          <option value="Modern Masters">Modern Masters</option>
+          <option value="Modern Masters 2015 Edition">Modern Masters 2015 Edition</option>
+          <option value="Modern Masters 2017 Edition">Modern Masters 2017 Edition</option>
+          <option value="Morningtide">Morningtide</option>
+          <option value="Nemesis">Nemesis</option>
+          <option value="New Phyrexia">New Phyrexia</option>
+          <option value="Ninth Edition">Ninth Edition</option>
+          <option value="Oath of the Gatewatch">Oath of the Gatewatch</option>
+          <option value="Odyssey">Odyssey</option>
+          <option value="Onslaught">Onslaught</option>
+          <option value="Planar Chaos">Planar Chaos</option>
+          <option value="Planechase">Planechase</option>
+          <option value="Planechase 2012 Edition">Planechase 2012 Edition</option>
+          <option value="Planechase Anthology">Planechase Anthology</option>
+          <option value="Planeshift">Planeshift</option>
+          <option value="Portal">Portal</option>
+          <option value="Portal Second Age">Portal Second Age</option>
+          <option value="Portal Three Kingdoms">Portal Three Kingdoms</option>
+          <option value="Premium Deck Series: Fire and Lightning">Premium Deck Series: Fire and Lightning</option>
+          <option value="Premium Deck Series: Graveborn">Premium Deck Series: Graveborn</option>
+          <option value="Premium Deck Series: Slivers">Premium Deck Series: Slivers</option>
+          <option value="Promo set for Gatherer">Promo set for Gatherer</option>
+          <option value="Prophecy">Prophecy</option>
+          <option value="Ravnica: City of Guilds">Ravnica: City of Guilds</option>
+          <option value="Return to Ravnica">Return to Ravnica</option>
+          <option value="Revised Edition">Revised Edition</option>
+          <option value="Rise of the Eldrazi">Rise of the Eldrazi</option>
+          <option value="Saviors of Kamigawa">Saviors of Kamigawa</option>
+          <option value="Scars of Mirrodin">Scars of Mirrodin</option>
+          <option value="Scourge">Scourge</option>
+          <option value="Seventh Edition">Seventh Edition</option>
+          <option value="Shadowmoor">Shadowmoor</option>
+          <option value="Shadows over Innistrad">Shadows over Innistrad</option>
+          <option value="Shards of Alara">Shards of Alara</option>
+          <option value="Starter 1999">Starter 1999</option>
+          <option value="Starter 2000">Starter 2000</option>
+          <option value="Stronghold">Stronghold</option>
+          <option value="Tempest">Tempest</option>
+          <option value="Tempest Remastered">Tempest Remastered</option>
+          <option value="Tenth Edition">Tenth Edition</option>
+          <option value="The Dark">The Dark</option>
+          <option value="Theros">Theros</option>
+          <option value="Time Spiral">Time Spiral</option>
+          <option value="Time Spiral &quot;Timeshifted&quot;">Time Spiral &quot;Timeshifted&quot;</option>
+          <option value="Torment">Torment</option>
+          <option value="Ugin's Fate promos">Ugin's Fate promos</option>
+          <option value="Unglued">Unglued</option>
+          <option value="Unhinged">Unhinged</option>
+          <option value="Unlimited Edition">Unlimited Edition</option>
+          <option value="Urza's Destiny">Urza's Destiny</option>
+          <option value="Urza's Legacy">Urza's Legacy</option>
+          <option value="Urza's Saga">Urza's Saga</option>
+          <option value="Vanguard">Vanguard</option>
+          <option value="Vintage Masters">Vintage Masters</option>
+          <option value="Visions">Visions</option>
+          <option value="Weatherlight">Weatherlight</option>
+          <option value="Welcome Deck 2016">Welcome Deck 2016</option>
+          <option value="Welcome Deck 2017">Welcome Deck 2017</option>
+          <option value="Worldwake">Worldwake</option>
+          <option value="Zendikar">Zendikar</option>
+          <option value="Zendikar Expeditions">Zendikar Expeditions</option> -->
+      </select>
+    </div>
 
-    <body>
-			<p>
-	      Card Set:
-	    </p>
-	    <div class="style-select">
-	      <select name="CardSets" id="cardSets">
+    <div class="style-select">
+      <select name="CardType" id="cardType" onchange="CTYPE">
+            <option value="">Select Card Type?</option>
+            <option value="Artifact">Artifact</option>
+            <option value="Basic">Basic</option>
+            <option value="Conspiracy">Conspiracy</option>
+            <option value="Creature">Creature</option>
+            <option value="Enchantment">Enchantment</option>
+            <option value="Instant">Instant</option>
+            <option value="Land">Land</option>
+            <option value="Legendary">Legendary</option>
+            <option value="Ongoing">Ongoing</option>
+            <option value="Phenomenon">Phenomenon</option>
+            <option value="Plane">Plane</option>
+            <option value="Planeswalker">Planeswalker</option>
+            <option value="Scheme">Scheme</option>
+            <option value="Snow">Snow</option>
+            <option value="Sorcery">Sorcery</option>
+            <option value="Tribal">Tribal</option>
+            <option value="Vanguard">Vanguard</option>
+            <option value="World">World</option>
+        </select>
+    </div>
+
+    <!-- <p>
+      multiverseid:
+    </p>
+    <div class="style-select">
+        <select name="CardRarity" id="multiverseid"></select> -->
+
+          <div class="style-select" style="padding: 0px;">
+            <select name="CardCost" id="cardCost" onchange="CMC">
+                <option value="">Select Combines Mana Cost?</option>
+                <!-- <option value="Artifact">Artifact</option>
+                <option value="Basic">Basic</option>
+                <option value="Conspiracy">Conspiracy</option>
+                <option value="Creature">Creature</option>
+                <option value="Enchantment">Enchantment</option>
+                <option value="Instant">Instant</option>
+                <option value="Land">Land</option>
+                <option value="Legendary">Legendary</option>
+                <option value="Ongoing">Ongoing</option>
+                <option value="Phenomenon">Phenomenon</option>
+                <option value="Plane">Plane</option>
+                <option value="Planeswalker">Planeswalker</option>
+                <option value="Scheme">Scheme</option>
+                <option value="Snow">Snow</option>
+                <option value="Sorcery">Sorcery</option>
+                <option value="Tribal">Tribal</option>
+                <option value="Vanguard">Vanguard</option>
+                <option value="World">World</option> -->
+              </select>
+    <!-- <p>
+      Select Sort Order:</p>
+    <div class="style-select">
+      <select name="sortOrder" id="ctl00_ctl00_MainContent_Content_SearchControls_sortOrder">
+                                                    <option value=""></option>
+                                                    <option value="cn">Collector's Number</option>
+          <option value="color">Color</option>
+                                                    <option value="mana">Color Weight</option>
+                                                    <option value="rating">Community Rating</option>
+                                                    <option value="cmc">Converted Mana Cost</option>
+                                                    <option value="abc">Name</option>
+                                                    <option value="p">Power</option>
+                                                    <option value="rarity">Rarity</option>
+                                                    <option value="t">Toughness</option>
+                                                </select>
+    </div>
+    <p> -->
+      <!-- Select Output Format:</p>
+    <div class="style-select">
+      <select name="resultsView" id="ctl00_ctl00_MainContent_Content_SearchControls_resultsView">
+                                                    <option value=""></option>
+                                                    <option value="standard">Standard</option>
+                                                    <option value="compact">Compact</option>
+                                                    <option value="checklist">Checklist</option>
+                                                    <option value="visualspoiler">Visual Spoiler</option>
+                                                </select> -->
+    </div>
+
+    <div class="style-select">
+      <select name="CardRarity" id="cardRarity" onchange="RARITY()">
+        <option value="">Select Rarity?</option>
+        <option value="common">Common</option>
+        <option value="uncommon">Uncommon</option>
+        <option value="rare">Rare</option>
+        <option value="mythicRare">Mythic Rare</option>
+      </select>
+
+    Select Color(s):
+		<div class="style-select">
+			<select name="CardColor" id="cardColor" onchange="COLOR()">
+					<option value="">Select Color?</option>
+					<option value="Black">Black</option>
+					<option value="Blue">Blue</option>
+					<option value="Green">Green</option>
+					<option value="Red">Red</option>
+					<option value="White">White</option>
 				</select>
-	    </div>
+  </div>
+  </div>
+  </div><section class="webdesigntuts-workshop">
+		<form action="https://api.magicthegathering.io/v1/cards?='placeholder'" method="onSubmit">
+			<input type="search" placeholder="Name of Card? (Partial OK)	">
+			<button>Search</button>
+		</form>
+	</section>
+</div>
 
-      <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="js/materialize.min.js"></script>
-			<script src="app.js" charset="utf-8"></script>
-		</body>
-	<body>
 
-	</body>
-	<footer class="page-footer">
-          <div class="container">
-            <div class="row">
-              <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-              </div>
-              <div class="col l4 offset-l2 s12">
-                <h5 class="white-text">Links</h5>
-                <ul>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 2</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 3</a></li>
-                  <li><a class="grey-text text-lighten-3" href="#!">Link 4</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-          <div class="footer-copyright">
-            <div class="container">
-            © 2017 MTG4ME
-            <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
-            </div>
-          </div>
-        </footer>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+  <!-- <script type="text/javascript" src="js/materialize.min.js"></script> -->
+  <script src="http://malsup.github.io/jquery.cycle.all.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="main.css">
+
+</body>
+
+<footer>© 2017 MTG4ME</footer>
 </html>
