@@ -19,7 +19,9 @@ As of June 30th, 2017 only the search bar function is operations
 What is the purpose of the project?
 
 ```
-To enable construction of themed and other type Magic The Gathering (MTG) with optimal efficiency. And most because NOBODY is able to keep current with the overwhelming number of MTG cards that are now out there.
+To enable construction of themed and other type Magic The Gathering (MTG)
+with optimal efficiency. And most because NOBODY is able to keep current
+with the overwhelming number of MTG cards that are now out there.
 ```
 
 
@@ -47,5 +49,9 @@ You can still manually enter query strings into the "search" bar. Including the 
 - power/toughness -
 						"power=[#]&toughness=[#]"
 							You can also use the modifiers "gt" and "it"
-							
+
 							i.e. "power=[gt#]&toughness=[it#]"
+
+## Video
+
+[Link](https://vimeo.com/223834851)
