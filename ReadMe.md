@@ -13,7 +13,7 @@ This Applications is a tool to ultimately help build decks for Magic The Gatheri
 
 ## Narrative
 
-As of June 30th, 2017 only the search bar function is operations  
+As of June 30th, 2017 only the search bar function is operational.
 
 ## Why MTG4ME?
 What is the purpose of the project?
