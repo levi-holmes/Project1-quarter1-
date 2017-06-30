@@ -6,10 +6,10 @@
   <meta charset="utf-8">
   <title>Card search MTG</title>
 
-    <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="main.css">
   <script type="text/javascript" src="https://code.jquery.com/jquery-1.6.3.min.js"></script>
-<!-- <script type="text/javascript" src="scripts/jquery.cycle.all.2.74.js"></script> -->
-<script>
+  <script type="text/javascript" src="jquery.cycle.all.2.74.js"></script>
+  <script>
 $(document).ready(function() {
 	$('#slideshow').cycle({
 	fx: 'fade',
@@ -21,6 +21,7 @@ $(document).ready(function() {
 });
 </script>
 </head>
+
 
 <body>
   <div id="slideshow">
@@ -37,9 +38,8 @@ $(document).ready(function() {
 
        <p><h2>Select Search Criteria:</h2></p>
 			<br>
-       <div class="row">
 
-
+   <div class="row">
     <div class="style-select">
       <select name="CardBlock" id="cardBlock" onchange="CBLOCK">
           <option value="">Select Block?</option>
@@ -307,7 +307,7 @@ $(document).ready(function() {
   </div><section class="webdesigntuts-workshop">
 
     <form>
-			<input type="text" class="form-control" id="search" placeholder="Name of Card? (Partial OK)">
+			<input type="text" class="searchInput" id="search" placeholder="Name of Card? (Partial OK)">
 			<button id="searchButton">Search</button>
 		</form>
 
@@ -321,6 +321,9 @@ $(document).ready(function() {
   <script src="https://malsup.github.io/jquery.cycle.all.js" charset="utf-8"></script>
   <script src="app.js" charset="utf-8"></script>
   <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
 </body>
 
