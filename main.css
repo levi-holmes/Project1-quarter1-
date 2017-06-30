@@ -169,22 +169,11 @@ body {
    z-index:-9999;
  }
 
-.style-select{background-color: white 90%;
+.style-select{
+	background-color: white 90%;
 	display: inline-block;
 	text-align: center;
-
-
-
-
 }
-
-/*html {
-  background: url(images/bg.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}*/
 
 footer{
 	text-align: center;
